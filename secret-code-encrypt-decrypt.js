@@ -18,11 +18,9 @@ class ShiftCipher {
         } else {
             let number = alphabets.indexOf(str[i]) + this.shiftByNumber;
             if (number <= 25) {
-                // console.log(alphabets[number].toUpperCase());
                 codedString = codedString + alphabets[number].toUpperCase();
             } else if (number > 25)  {
                 number = number - 26;
-                //console.log(alphabets[number].toUpperCase());
                 codedString = codedString + alphabets[number].toUpperCase();
             }
         }
@@ -40,11 +38,9 @@ class ShiftCipher {
         let number = alphabets.indexOf(str[i]) - this.shiftByNumber;
         if (number < 0) {
             number = 26 + number;
-            //console.log(number);
             codedString = codedString + alphabets[number];
         } else if (number >= 0)  {
             codedString = codedString + alphabets[number];
-            //console.log(number);
         }
       }
     }
